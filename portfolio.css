@@ -1,0 +1,184 @@
+/* css/styles.css */
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #74992e;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #266375;
+}
+
+section {
+    padding: 2em;
+    border-bottom: 1px solid #6d147e;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+}
+
+p {
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+/* Project section */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.project-item {
+    flex: 1 1 calc(33% - 1em);
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+.project-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-title {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.project-description {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #1e90ff;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #3742fa;
+}
+
+/* Skills section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.skill-item {
+    flex: 1 1 calc(20% - 1em);
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.skill-item:hover {
+    transform: scale(1.05);
+}
+
+/* Contact section */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info p {
+    margin: 0.5em 0;
+}
+
+.contact-info a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .project-item, .skill-item {
+        flex: 1 1 calc(50% - 1em);
+    }
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .project-item, .skill-item {
+        flex: 1 1 100%;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
